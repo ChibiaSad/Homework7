@@ -80,16 +80,16 @@ public class Main {
         System.out.println("В строке нет дублирующихся символов");
     }
 
-    public static int summarySpend(int[] salaries){
+    public static int summarySpend(int[] spends){
         int sum = 0;
-        for (int sal : salaries) {
-           sum += sal;
+        for (int spend : spends) {
+           sum += spend;
         }
         return sum;
     }
 
-    public static double averageSpend(int[] salaries){
-        return (double) summarySpend(salaries) / salaries.length;
+    public static double averageSpend(int[] spends){
+        return (double) summarySpend(spends) / spends.length;
     }
 
     public static int[] randomArray(int length){
