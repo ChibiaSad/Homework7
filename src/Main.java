@@ -15,7 +15,7 @@ public class Main {
         reverseArray(digits);
         System.out.println(Arrays.toString(digits));
         //task 5
-        repeatedChars("aabccddefgghiijjkk");
+        repeatedChars("abcddefghijkk");
         //task 6
         System.out.printf("Средняя выплата - %.2f рублей\n", averageSpend(randomArray(30)));
     }
@@ -69,12 +69,10 @@ public class Main {
 
     public static void repeatedChars(String text){
         char[] chars = text.toCharArray();
-        for (int i = 0; i < chars.length; i ++) {
-            for (int j = i + 1; j < chars.length; j++) {
-                if(chars[i] == chars[j]){
-                    System.out.printf("В строке дублируется символ [%s]\n", chars[i]);
-                    return;
-                }
+        for (int i = 0; i < chars.length - 1; i ++) {
+            if(chars[i] == chars[i+1]){
+                System.out.printf("В строке дублируется символ [%s]\n", chars[i]);
+                return;
             }
         }
         System.out.println("В строке нет дублирующихся символов");
